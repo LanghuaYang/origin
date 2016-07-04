@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>my first page</title>
+	    <style type="text/css">
+	    h1{
+			font-size:12px;
+			color:930;
+			text-align:center;
+	    }
+	    pre{
+	    	display: block;
+	    	/*<!--font-size: 19px;-->*/
+	    	font-family: monospace;
+	    	white-space: pre;
+	    	margin: lem 0;
+	    }
+	    code{
+	    	font-family: monospace;
+	    }
+        table tr td,th{
+        	border:1px solid #000;
+        }
+	    </style>
+</head>
+<body>
+<!--comment starts here-->
+	 <h1><a href="http://www.m1905.com/mdb/star/3316/" target="_blank">Hello World!</a></h1>
+	 <form>
+	 	<label for="username">username：</label>
+	 	<input type="text" name="username" id="username" value=""/><br>
+	 	<label for="pass">password:</label>
+	 	<input type="password" name="pass" id="pass" value=""/><br>
+	 	<!--同一组的radio或者checkbox，name'必须相同-->
+	 	<label for="male">Male</label>
+  		<input type="radio" name="gender" id="male" value="male"><br>
+  		<label for="female">Female</label>
+  		<input type="radio" name="gender" id="female" value="female"><br>
+  		<select>
+  			<optgroup label="水上运动">
+  				<option value="游泳">游泳</option>
+  				<option value="跳水">跳水</option>
+  			</optgroup>
+  			<optgroup label="陆地运动">
+  				<option value="跑步">跑步</option>
+  				<option value="跳绳">跳绳</option>
+  			</optgroup>
+  		</select><br>
+	 	<input type="submit" name="submit" value="submit input message"/>
+	 	<input type="reset" name="reset" value="reset input message">
+	 </form>
+<div id="list" style="color:blue">
+    <ul>
+    	<li class="item1">我的未排序列表信息</li>
+    	<li class="item2">我的未排序列表信息</li>
+    	<li class="item3">我的未排序列表信息</li>
+    	<li class="item4">我的未排序列表信息</li>
+    	<li class="item5">我的未排序列表信息</li>
+    	<li class="item6">我的未排序列表信息</li>
+    	<li class="item7">我的未排序列表信息</li>
+    	<li class="item8">我的未排序列表信息</li>
+    	<li class="item9">我的未排序列表信息</li>
+    	<li class="item10">我的未排序列表信息</li>
+    </ul>
+    <ol>
+    	<li class="item1">我的排序列表信息</li>
+    	<li class="item2">我的排序列表信息</li>
+    	<li class="item3">我的排序列表信息</li>
+    	<li class="item4">我的排序列表信息</li>
+    	<li class="item5">我的排序列表信息</li>
+    	<li class="item6">我的排序列表信息</li>
+    	<li class="item7">我的排序列表信息</li>
+    	<li class="item8">我的排序列表信息</li>
+    	<li class="item9">我的排序列表信息</li>
+    	<li class="item10">我的排序列表信息</li>
+    </ol>
+</div>
+<div id = "table">
+	<table summary="显示各个班级的名次和成绩">
+	<caption>班级名次排行</caption>
+		<tbody>
+			<tr>
+				<th>班级</th>
+				<th>成绩</th>
+				<th>排名</th>
+			</tr>
+			<tr>
+				<td>一班</td>
+				<td>87</td>
+				<td>2</td>
+			</tr>
+			<tr>
+				<td>二班</td>
+				<td>90</td>
+				<td>1</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div id = "article" style="color:red">
+	 <h2>勇气&nbsp;&nbsp;杨浪花</h2>
+	 <p>三年级时，我还是一个胆小如鼠的小女孩，<q>庄生晓梦迷蝴蝶，王帝春心托杜鹃</q>我的列<em>尼克•卡拉威</em>
+	 上课从来不敢回答老师提出的问题，生怕回答错了老师会批评我。就一直没有这个勇气来回答老师提出的问题。学校举办的活动我也没勇气参加。</p>
+	 <hr/>
+	 <code>var = x;</code>
+	 <blockquote>暗淡轻黄体性柔，情疏迹远只香留。何须浅碧深红色，自是花中第一流。</blockquote>
+	 <p>到了三年级下学期时，我们班上了一节<span style="color:blue">美国梦</span>公开课，老师提出了一个很简单的问题，班里很多同学都举手了，甚至成绩<strong>"爵士乐时代"</strong>比我差很多的，也举手了，还说着："我来，我来。"我环顾了四周，就我没有举手。</p>
+	 <p>暗淡轻黄体性柔，<br/>情疏迹远只香留。<br/>何须浅碧深红色，<br/>自是花中第一流。</p>
+</div>
+	 <img src="http://img.mukewang.com/52b4113500018cf102000200.jpg" alt="图片显示不成功" title="我的图片">
+	 <address>12 Preston Ave, Mt Albert, Auckland</address>
+	 <pre>
+	 int i = 0; 
+	 int j = 12; 
+	 i = j;
+	 </pre>
+	 <a href="mailto:ylh870721@163.com?Subject=hello,langhua&bcc=ylh870721@gmail.com&body=Hi Langhua,I'd like to contact you">联系作者</a>
+</body>
+</html>
