@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>混合布局编程挑战</title>
+<style type="text/css">
+/*任务1：完成顶部（top）、底部（foot）宽度自适应任务2：中间分为2两栏，其中，左侧（left）宽度为200px， 右侧（right）宽度自适应任务3：要求右侧（right）先加载，左侧（left）后加载*/
+body{ margin:0; padding:0; font-size:30px; color:#fff}
+.top{width:100%; height:100px;background:#ccc;}
+.main{height:600px;background:red;}
+.left{width:200px;height:600px;position:absolute; left:0px;top:100px;background:blue;}
+.right{height:600px;background:green;margin: 0px 0px 0px 210px;}
+.foot{background:orange;height:100px;}
+</style>
+
+</head>
+
+<body>
+<div class="top">top</div>
+<div class="main">
+    <div class="right">right</div>
+    <div class="left">left</div>
+</div>
+<div class="foot">foot</div>
+
+</body>
+</html>
