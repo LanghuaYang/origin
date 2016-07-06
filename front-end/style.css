@@ -1,0 +1,40 @@
+	    body{
+	    	background-color:pink;
+	    }
+	    h1{
+	    	/*css comment format*/
+	    	/*selector declaration(property:value;)*/
+	    	/*priority inline > internal > external */
+			font-size:12px;
+			color:930;
+			text-align:center;
+	    }
+	    pre{
+	    	display: block;
+	    	/*<!--font-size: 19px;-->*/
+	    	font-family: monospace;
+	    	white-space: pre;
+	    	margin: lem 0;
+	    }
+	    code{
+	    	font-family: monospace;
+	    }
+        table tr td,th{
+        	border:1px solid #000;
+        }
+        .setgreen{
+        	color:purple;
+        }
+        #article{
+        	border: 1px solid red;
+        }
+        a:hover{
+        	color:red;
+        	font-size:20px;
+        }
+        #list>ul>li{  /*权值为100+1+1*/
+        	color:green;
+        }
+        #list li{
+        	color:red;
+        }

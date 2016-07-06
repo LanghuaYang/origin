@@ -1,0 +1,145 @@
+CSS全称为“层叠样式表 (Cascading Style Sheets)”，它主要是用于定义HTML内容在浏览器内的显示样式，如文字大小、颜色、字体加粗等。CSS removed the style formatting from the HTML page!
+
+internal 嵌入式css样式必须写在<style></style>之间，并且一般情况下嵌入式css样式写在<head></head>之间。
+external 把css代码写一个单独的外部文件中，这个css样式文件以“.css”为扩展名，在<head>内（不是在<style>标签内）使用<link>标签将css样式文件链接到HTML文件内 <link href="base.css" rel="stylesheet" type="text/css" />
+inline  <p style="color:blue; font-size:12px;"></p>
+inline>internal>external
+internal>external when internal is written before external
+
+selector:
+1,tag
+2,class  .class 可以多个element属于同一个类，也可以一个element属于多个类 The class attribute is mostly used to point to a class in a style sheet.
+3,id	#id 一个id只属于一个element
+4,> parent selector
+5，空格 div p 作用于所有inside div的p  
+6，分组选择（，）前后元素无关联关系
+7,a:hover{color:red;}
+
+
+*		*	Selects all elements
+element		p	Selects all <p> elements
+element,element	div, p	Selects all <div> elements and all <p> elements
+element element	div p	Selects all <p> elements inside <div> elements	
+element>element	div > p	Selects all <p> elements where the parent is a <div> element
+element+element	div + p	Selects all <p> elements that are placed immediately after <div> elements
+
+继承
+color属性有继承性，border没有
+权值
+标签的权值为1，类选择符的权值为10，ID选择符的权值最高为100。
+> 空格 逗号，权值相加
+层叠
+相同权重的样式存在时，会根据这些css样式的前后顺序来决定 
+重要性
+!important要写在分号的前面 浏览器默认的样式 < 网页制作者样式 < 用户自己设置的样式 < !important
+
+文字排版：
+字体：		font-family:"宋体";
+字号、颜色 	body{font-size:12px;color:#666}
+粗体		font-weight:bold;
+斜体		font-style:italic;
+下划线		text-decoration:underline;
+删除线		text-decoration:line-through;
+
+段落排版：
+缩进		p{text-indent:2em;}2em的意思就是文字的2倍大
+行间距		p{line-height:1.5em;}
+字母间距 	letter-spacing:50px; 中文被认为是一个字母
+单词间距	word-spacing:50px;
+对齐		text-align:center/left/right div{text-align:center;}
+
+html元素分类，可以使用display:block/inline/inline-block来修改元素的分类属性
+
+block：<div>、<p>、<h1>...<h6>、<ol>、<ul>、<dl>、<table>、<address>、<blockquote> 、<form>
+1，一个块级元素独占一行；
+2，元素的背景色，高度、宽度、行高以及顶和底边距都可设置；
+3，与父元素的宽度一致，除非设定一个宽度
+
+inline：<a>、<span>、<br>、<i>、<em>、<strong>、<label>、<q>、<var>、<cite>、<code>
+1、和其他元素都在一行上；
+2、元素的高度、宽度及顶部和底部边距不可设置；
+3、元素的宽度就是它包含的文字或图片的宽度，不可改变。
+
+inline-block：<img>、<input>
+1、和其他元素都在一行上；
+2、元素的高度、宽度、行高以及顶和底边距都可设置。
+
+盒子模型 box model
+
+block元素具备盒子模型的特征，padding，margin，border都具有四个方向
+1，padding 	padding在边框里
+2，margin 	margin在边框外
+3，border 
+border:2px  solid  red;等价于border-width:2px;border-style:solid;border-color:red;
+style：dashed（虚线）| dotted（点线）| solid（实线）。
+单独设置border-bottom border-bottom:1px solid red;
+4,盒子的宽高：width+padding+border+margin width是content的宽度
+margin: 25px 50px 75px 100px; 	上右下左
+margin: 25px 50px 75px; 	上右=左下
+margin: 25px 50px;  		上=下 右=左
+margin: 25px;			上=右=左=下
+margin: auto;
+margin: %5;
+margin:	inherit;
+
+元素有三种布局模型：
+
+1、流动模型（Flow）  html页默认为flow
+1，块状元素自上而下按顺序垂直延伸分布，,宽度都为100%。
+2，内联元素都会在所处的包含元素内从左到右水平分布显示。
+
+2、浮动模型 (Float) 两个块状元素并排显示 float:left clear:left
+1，设置前一个元素float，后一个会与之并排显示Elements after a floating element will flow around it.
+2, 去掉float效果 The clear property specifies on which sides of an element floating elements are not allowed to float
+
+3、层模型（Layer）
+1,绝对定位(position: absolute)  相对于其最接近的一个具有定位属性的父包含块进行绝对定位,如果不存在这样的包含块,相对于浏览器窗口
+2,相对定位(position: relative)  相对于以前的位置移动
+3,固定定位(position: fixed)     与absolute定位类型类似,不会随浏览器窗口的滚动条滚动而变化
+4,Relative与Absolute组合使用    1,参照定位的元素必须是相对定位元素的前辈元素 2,参照定位的元素必须加入position:relative; 3,定位元素加入position:absolute
+
+颜色和字体缩写
+
+1，颜色 #223344 缩写为#234
+2，字体 至少要指定 font-size 和 font-family属性，其他的属性如未指定将自动使用默认值
+body{
+    font:italic  small-caps  bold  12px/1.5em  "宋体",sans-serif;
+}
+
+颜色值和长度值
+1，颜色 
+valid color name：	color:red; 
+an RGB value：		color:rgb(133,45,200);color:rgb(20%,33%,25%);
+a HEX value		color:#00ffff;
+2，字体
+长度单位总结一下，目前比较常用到
+px（像素）
+em  相对于字体大小，当给 font-size 设置单位为 em 时，此时计算的标准以 p 的父元素的 font-size 为基础
+%   相对于字体百分比 
+
+水平居中设置
+
+1，行内元素 通过给父元素设置 text-align:center 来实现的
+2，块状元素
+1）定宽块状元素  
+width:200px;/*定宽*/
+margin:20px auto;/* margin-left 与 margin-right 设置为 auto */
+两个2个条件缺一不可
+2）不定宽块状元素
+1》加入 table 标签：
+利用table标签的长度自适应性---即不定义其长度也不默认父元素body的长度（table其长度根据其内文本长度决定），因此可以看做一个定宽度块元素
+2》设置 display: inline 方法：
+与第一种类似，显示类型设为 行内元素，进行不定宽元素的属性设置，display 为 inline 类型（设置为 行内元素 显示，然后使用 text-align:center 来实现居中效果。
+3》设置float position:relative 和 left:50%：
+通过给父元素设置 float，然后给父元素设置 position:relative 和 left:50%，子元素设置 position:relative 和 left: -50% 来实现水平居中。
+
+垂直居中
+1，父元素高度确定的单行文本：竖直居中的方法是通过设置父元素的 height 和 line-height 高度一致来实现的。(height: 该元素的高度，line-height: 顾名思义，行高（行间距）
+2，父元素高度确定的多行文本、图片
+1）使用插入 table  (包括tbody、tr、td)标签，同时设置 table td{vertical-align：middle}可以不写，table默认是middle的
+
+隐形改变display类型
+有一个有趣的现象就是当为行内元素（不论之前是什么类型元素，display:none 除外）设置以下 2 个句之一：
+ 1. position : absolute 
+ 2. float : left 或 float:right 
+简单来说，只要html代码中出现以上两句之一，元素的display显示类型就会自动变为以 display:inline-block（块状元素）的方式显示，当然就可以设置元素的 width 和 height 了
