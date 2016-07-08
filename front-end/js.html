@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="script.js">
+		
+	</script>
+	<style type="text/css">
+		.two{
+			font-size: 100px;
+		}
+	</style>
+</head>
+<body>
+	<form>
+		<input type="button" name="button1" value="clickme" onclick="print()">
+		<input type="button" name="button2" value="clickme show the alert win" onclick="alertbutton()">
+		<input type="button" name="button3" value="clickme show the confirmation win" onclick="confirmbutton()">
+		<input type="button" name="button4" value="clickme show prompt win" onclick="promptbutton()">
+		<input type="button" name="button5" value="clickme open baidu" onclick="Wopen()">
+		
+	</form>
+	<p id="con" class="one">java script</p>
+	<input type="button" onclick="hidetext()" value="隐藏内容" /> 
+    <input type="button" onclick="showtext()" value="显示内容" /> 
+    <input type="button" onclick="modify()" value="更改样式" /> 
+    <input type="button" onclick="changeColor()" value="更改颜色" /> 
+    <input type="button" onclick="cancel()" value="取消所有更改">
+	<script type="text/javascript">
+	    var mychar= document.getElementById("con");
+	    document.write(mychar+mychar.innerHTML);
+	    mychar.innerHTML="HELLO WORLD";
+    	mychar.style.color="red";
+    	mychar.style.backgroundColor="#ccc";
+    	mychar.style.width="300px";
+    	function hidetext()  
+		{  
+			var mychar = document.getElementById("con");
+        	mychar.style.display="none";
+		}  
+		function showtext()  
+		{  
+			var mychar = document.getElementById("con");
+        	mychar.style.display="block";
+		}
+		function modify()
+		{
+			document.getElementById("con").className = "two";
+		}
+		function changeColor()
+		{
+			document.getElementById("con").innerHTML();
+			//style.color = "green";
+		}
+		function cancel()
+		{
+			var mychar = confirm("取消更改吗？");
+			if(mychar)
+			{
+				one.removeAttribute("style");
+			}
+		}
+    </script>
+</body>
+</html>
